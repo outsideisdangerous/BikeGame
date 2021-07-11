@@ -1,0 +1,24 @@
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 6rem);
+}
+
+.cell {
+  background-color: cornflowerblue;
+  border: #333 1px solid;
+}
+
+.cell:nth-child(odd) {
+  background-color: rgb(38, 185, 112);
+}
+
+.bike {
+  position: absolute;
+  background-color: crimson;
+}
+
+.bike-location {
+  background-color: red !important;
+}
