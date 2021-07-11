@@ -1,0 +1,15 @@
+.grid-cell {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #727272;
+  transition: 200ms;
+}
+
+.grid-cell:hover {
+  box-shadow: 0 0 5px #2e2e2e;
+}
+
+.bike-location {
+  background-color: violet;
+}

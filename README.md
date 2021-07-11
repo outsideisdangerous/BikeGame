@@ -39,3 +39,14 @@ x,y method
 6,0 6,1... 6,6
 
 x = 0 === top edge x = 6 === bottom edge y = 0 left edge y = 6 right edge
+
+PLAN OF ACTION
+
+1. Flip grid so that 0,0 is at the bottom left of the grid
+2. Create three buttons: FORWARD, TURN RIGHT, TURN LEFT
+3. Add arbitary handlers to those buttons, e.g., console.log when buttons are clicked
+4. Work on the rotation first, e.g., if facing NORTH and click TURN RIGHT, it should say facing EAST, you can echo or console.log the facing
+5. Work on movement according to facing
+6. GPS report
+7. Vision function, a.k.a. edge detection, a.k.a. don't fall off the grid.
+8. Refactor the hard coded grid, and use for loops.

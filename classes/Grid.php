@@ -6,22 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../style.css">
+  <script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+<script>
+$('.button').click(function() {
+  $.ajax({
+    type: "POST",
+    url: "some.php",
+    data: { name: "John" }
+  }).done(function( msg ) {
+    alert( "Data Saved: " + msg );
+  });
+});
+</script>
+  
 </head>
 <body>
-  
+<div id="container"></div>
+
 
 <?php
 
-$grid = array(array(0,0), array(0,1), array(0,2), array(0,3), array(0,4), array(0,5), array(0,6),
-              array(1,0), array(1,1), array(1,2), array(1,3), array(1,4), array(1,5), array(1,6),
-              array(2,0), array(2,1), array(2,2), array(2,3), array(2,4), array(2,5), array(2,6), 
-              array(3,0), array(3,1), array(3,2), array(3,3), array(3,4), array(3,5), array(3,6),
-              array(4,0), array(4,1), array(4,2), array(4,3), array(4,4), array(4,5), array(4,6),
+$bike_location = array(4, 3);
+
+// if($_POST) {
+//   if((isset($_POST["forward"]))) {
+//     echo "Hello";
+//     $bike_location = array(5, 3);
+//   }
+// }
+
+$grid = array(array(6,0), array(6,1), array(6,2), array(6,3), array(6,4), array(6,5), array(6,6),
               array(5,0), array(5,1), array(5,2), array(5,3), array(5,4), array(5,5), array(5,6),
-              array(6,0), array(6,1), array(6,2), array(6,3), array(6,4), array(6,5), array(6,6)
+              array(4,0), array(4,1), array(4,2), array(4,3), array(4,4), array(4,5), array(4,6), 
+              array(3,0), array(3,1), array(3,2), array(3,3), array(3,4), array(3,5), array(3,6),
+              array(2,0), array(2,1), array(2,2), array(2,3), array(2,4), array(2,5), array(2,6),
+              array(1,0), array(1,1), array(1,2), array(1,3), array(1,4), array(1,5), array(1,6),
+              array(0,0), array(0,1), array(0,2), array(0,3), array(0,4), array(0,5), array(0,6)
 );
 
-$bike_location = array(4, 3);
 
 echo '<div class="container">';
   foreach ($grid as $val) {
@@ -57,6 +82,18 @@ echo '</div>';
 
 ?>
 
+<form method="post">
+    <input type="submit" name="test" id="test" value="RUN" />
+
+</form>
+
+<button id="button" name="forward">Forward</button>
+<button onclick="" type="button">Turn-right</button>
+
+<script>
+ 
+</script>
 
 </body>
 </html>
+
