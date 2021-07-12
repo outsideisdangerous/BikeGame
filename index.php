@@ -39,6 +39,7 @@
     </script>
 </head>
 <body>
+    <div class='Header'><h2>Bike Game</h2></div>
     <label>Place</label>
     <input name="placement" type="text" id="placement-input"/>
     <button onclick="submitPlacement()">Start</button>

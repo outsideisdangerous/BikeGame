@@ -1,8 +1,27 @@
+html,
+body {
+  height: 100vh;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#container {
+}
+
 .grid-cell {
   display: inline-block;
   width: 80px;
   height: 80px;
   border: 1px solid #727272;
+  background-color: rgb(112, 186, 230);
   transition: 200ms;
 }
 
